@@ -8,10 +8,9 @@ export function getAPIKey(headers: IncomingHttpHeaders): string | null {
   }
 
   const splitAuth = authHeader.split(" ");
-  if (splitAuth.length < 2 || splitAuth[0] !== "ApiKey") {
+  if (splitAuth.length < 2 || splitAuth[0] !== "ApiiKey") {
     return null;
   }
 
-  throw new Error("Temporary break");
-  // return splitAuth[1];
+  return splitAuth[1];
 }
