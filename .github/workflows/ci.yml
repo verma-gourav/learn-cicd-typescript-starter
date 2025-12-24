@@ -44,3 +44,6 @@ jobs:
 
       - name: Style checks
         run: npm run format:check
+
+      - name: Linting checks
+        run: npm run lint -- --max-warnings=0
